@@ -5,6 +5,52 @@ import ImgSource from './865098.jpg'
 function ActualWebPage(props) {
     return (
         <div>
+            
+            {/* Navbar of the main page */}
+            {/* "navbar-expand-md" means expand the full navbar for medium and greater than medium screens. */}
+            <nav className = "navbar navbar-expand-md navbar-light">
+                <div className="container-xxl">
+                    <a href="#intro" className = "navbar-brand">
+                        <span className = "fw-bold text-secondary">
+                            My Own Sample Webiste
+                        </span>
+                    </a>
+
+                    {/* Toggle button for mobile nav */}
+                    {/* On adding data-bs-toggle="collapse" and a data-bs-target to the element we can automatically assign control of one or more collapsible elements */}
+                    {/* The aria-controls attribute identifies the element (or elements) whose contents or presence are controlled by the element on which the attribute is set, 
+                    regardless of what type of interaction initiates the impacted behavior. */}
+                    {/* The aria-expanded attribute is set on an element to indicate if a control is expanded or collapsed, and whether or not the controlled elements are displayed or hidden. */}
+                    {/* The aria-label should be used to provide a text alternative to an element that has no visible text on the screen. */}
+                    <button className = "navbar-toggler" type = "button" data-bs-toggle = "collapse"
+                    data-bs-target = "#main-nav" aria-controls = "main-nav" aria-expanded = "false"
+                    aria-label = "Toggle navigation">
+                        <span className = "navbar-toggler-icon"></span>
+                    </button>
+
+                    {/* Navbar Links */}
+                    <div className = "collapse navbar-collapse justify-content-end align center" id = "main-nav">
+                        <ul className="navbar-nav">
+                            <li className = "nav-item">
+                                <a href = "#topics" className = "nav-link">About The Book</a>
+                            </li>
+                            <li className = "nav-item">
+                                <a href = "#reviews" className = "nav-link">Reviews</a>
+                            </li>
+                            <li className = "nav-item">
+                                <a href = "#ContactUs" className = "nav-link">Contact Us</a>
+                            </li>
+                            <li className = "nav-item d-md-none">
+                                <a href = "#Pricing" className = "nav-link">Pricing</a>
+                            </li>
+                            <li className = "nav-item ms-2 d-none d-md-inline">
+                                <a href = "#BuyNow" className = "btn btn-secondary">Buy Now</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>    
 
             {/* Main Image and intro text */}
             <section id = "intro">
