@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import './ActualWebPage.css'
 import ImgSource from './865098.jpg'
 
@@ -74,7 +74,12 @@ function ActualWebPage(props) {
                             and here the parent div have 5 columns so image will take 5 columns */}
                             {/* "alt" basically means alternative information, if for any reason the image is not shown on the webpage,
                             this text will be shown instead */}
+                            {/* Implementation of Tooltip (Basically when you hover to something, some text should come) */}
+                            {/* "data-bs-placement" used to assign the position of the text shown when hovered on it.
+                            "title" is the actual text that will be shown when hovered on this image */}
+                            <span data-bs-placement = "bottom" title = "Our Book cover 1">
                             <img className="img-fluid" src={ImgSource} alt="Dummy Image"/>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -388,6 +393,11 @@ function ActualWebPage(props) {
                                     <i class="bi bi-envelope-at-fill"></i>
                                     </span>
                                     <input type = "email" className = "form-control" id = "emails" placeholder = "supermario@abc.xyz"/>
+                                    <span className = "input-group-text">
+                                        <span data-bs-placement = "bottom" title = "Enter your email">
+                                            <i class="bi bi-question-circle text-muted"></i>
+                                        </span>
+                                    </span>
                                 </div>
                                 
 
@@ -397,6 +407,11 @@ function ActualWebPage(props) {
                                     <i class="bi bi-person-fill"></i>
                                     </span>    
                                     <input type = "text" className = "form-control" id = "name" placeholder = "Super Mario"/>
+                                    <span className = "input-group-text">
+                                        <span data-bs-placement = "bottom" title = "Enter your name">
+                                            <i class="bi bi-question-circle text-muted"></i>
+                                        </span>
+                                    </span>
                                 </div>
 
                                 <label for = "subject" className = "form-label pt-2">What is your question about :</label>
@@ -427,6 +442,63 @@ function ActualWebPage(props) {
 
                 </div>
             </sectin>
+
+            {/* Modals - The popups that we see in the websites */}
+            <section className = "bg-light">
+                <div className = "container">
+                    <div className = "text-center">
+                        <h2>Stay in the loop</h2>
+                        <p className="lead">Get the latest updates as they happen</p>
+                    </div>
+
+                    <div className = "row justify-content-center">
+                        <div className = "col-md-8 text-center">
+                            <p className = "text-muted my-4">
+                                This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. 
+                                This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. 
+                                This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. 
+                                This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. 
+                                This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. 
+                            </p>
+                            <button className = "btn btn-primary" data-bs-toggle = "modal" data-bs-target = "#reg-modal">
+                                Register for Updates
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            {/* Modal Implementation */}
+            {/* "aria-hidden" basically tells that this modal will not be shown by default when we load the page. */}
+            {/* "aria-labelledby" is linked to the if of the heading of the modal. */}
+            {/* "data-bs-dismiss" will look for what to dismiss when the button is pressed and we have given the id of the modal here. */}
+            {/* When adding a negative value to tabindex (usually tabindex="-1") it means the element is not reachable by the keyboard navigation, but can be focused using focus function in JS */}
+            <div className = "modal fade" id = "reg-modal" tabindex = "-1" aria-labelledby = "modal-title"
+            aria-hidden = "true">
+                <div className = "modal-dialog">
+                    <div className = "modal-content">
+                        <div className = "modal-header">
+                            <h5 className = "modal-title" id = "modal-title">Get the latest updates</h5>
+                            <button type = "button" className = "btn-close" data-bs-dismiss = "modal"
+                            aria-label="Close"></button>
+                        </div>
+                        <div className = "modal-body text-start">
+                            <p>
+                                This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. 
+                                This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. 
+                                This is a dummy text.
+                            </p>
+                            <label for="modal-email" className = "form-label">Your email address</label>
+                            <input type = "email" className = "form-control" id = "modal-email" placeholder = "e.g. supermario@abc.xyz"/>
+                        </div>
+                        <div className = "modal-footer">
+                            <button className = "btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             
         </div>
     );
