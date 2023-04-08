@@ -12,6 +12,7 @@ function ActualWebPage(props) {
                 <div className="container-xxl">
                     <a href="#intro" className = "navbar-brand">
                         <span className = "fw-bold text-secondary">
+                            <i className="bi bi-book-half"></i>
                             My Own Sample Webiste
                         </span>
                     </a>
@@ -38,7 +39,7 @@ function ActualWebPage(props) {
                                 <a href = "#reviews" className = "nav-link">Reviews</a>
                             </li>
                             <li className = "nav-item">
-                                <a href = "#ContactUs" className = "nav-link">Contact Us</a>
+                                <a href = "#contact" className = "nav-link">Contact Us</a>
                             </li>
                             <li className = "nav-item d-md-none">
                                 <a href = "#pricing" className = "nav-link">Pricing</a>
@@ -284,7 +285,148 @@ function ActualWebPage(props) {
                 </div>
             </section>
 
+            {/* Review List using Lists in bootstrap
+            Lists in bootsrap is just used to present some good looking Lists */}
+            <section className = "bg-light" id = "reviews">
+                <div className = "container-lg">
+                    <div className = "text-center">
+                        <h2><i className="bi bi-stars"></i> Reviews</h2>
+                        <p className = "lead">What our customers have to say about our services</p>
+                    </div>
+
+                    <div className = "row justify-content-center my-5">
+                        <div className = "col-lg-8">
+                            <div className = "list-group">
+
+                                <div className = "list-group-item py-3 text-start">
+                                    <div className = "pb-2">
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    </div>
+                                    <h5 className = "mb-1">A must buy for everyone</h5>
+                                    <p className = "mb-1">This is a Dummy text This is a Dummy text. This is a Dummy text. This is a Dummy text. 
+                                        This is a Dummy text. This is a Dummy text. This is a Dummy text. 
+                                        This is a Dummy text. This is a Dummy text.
+                                    </p>
+                                    <small>Chirag Aggrawal</small>
+                                </div>
+
+                                <div className = "list-group-item py-3 text-start">
+                                <div className = "pb-2">
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    </div>
+                                    <h5 className = "mb-1">A must buy for everyone</h5>
+                                    <p className = "mb-1">This is a Dummy text This is a Dummy text. This is a Dummy text. This is a Dummy text. 
+                                        This is a Dummy text. This is a Dummy text. This is a Dummy text. 
+                                        This is a Dummy text. This is a Dummy text.
+                                    </p>
+                                    <small>Chirag Aggrawal</small>
+                                </div>
+
+                                <div className = "list-group-item py-3 text-start">
+                                <div className = "pb-2">
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    </div>
+                                    <h5 className = "mb-1">A must buy for everyone</h5>
+                                    <p className = "mb-1">This is a Dummy text This is a Dummy text. This is a Dummy text. This is a Dummy text. 
+                                        This is a Dummy text. This is a Dummy text. This is a Dummy text. 
+                                        This is a Dummy text. This is a Dummy text.
+                                    </p>
+                                    <small>Chirag Aggrawal</small>
+                                </div>
+
+                                <div className = "list-group-item py-3 text-start">
+                                <div className = "pb-2">
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-fill"></i>
+                                    <i className="bi bi-star-half"></i>
+                                    </div>
+                                    <h5 className = "mb-1">A must buy for everyone</h5>
+                                    <p className = "mb-1">This is a Dummy text This is a Dummy text. This is a Dummy text. This is a Dummy text. 
+                                        This is a Dummy text. This is a Dummy text. This is a Dummy text. 
+                                        This is a Dummy text. This is a Dummy text.
+                                    </p>
+                                    <small>Chirag Aggrawal</small>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
+            {/* Contact Form (form-control, form-label, form-select, input-group, input-group-text) */}
+            <sectin id = "contact">
+                <div className = "container-lg">
+                    <div className = "text-center my-5">
+                        <h2>Get In Touch</h2>
+                        <p className = "lead">Questions to ask? Fill out the form to contact me directly... </p>
+                    </div>
+
+                    <div className = "row justify-content-center my-5 text-start">
+                        <div className = "col-lg-6">
+                            {/* "for" is used to tell that this label corrosponds to which input */}
+                            <form>
+                                <label for = "emails" className = "form-label">Email Address :</label>
+                                <div className = "input-group">
+                                    {/* On the place of regular input we have added one icon at the start with that to make to more attractive
+                                    if we place input tag before the span then the icon will come at the end of the input element */}
+                                    <span className = "input-group-text">
+                                    <i class="bi bi-envelope-at-fill"></i>
+                                    </span>
+                                    <input type = "email" className = "form-control" id = "emails" placeholder = "supermario@abc.xyz"/>
+                                </div>
+                                
+
+                                <label for = "name" className = "form-label pt-2">Name :</label>
+                                <div className = "input-group">
+                                    <span className = "input-group-text">
+                                    <i class="bi bi-person-fill"></i>
+                                    </span>    
+                                    <input type = "text" className = "form-control" id = "name" placeholder = "Super Mario"/>
+                                </div>
+
+                                <label for = "subject" className = "form-label pt-2">What is your question about :</label>
+                                <div className = "input-group">
+                                    <span className = "input-group-text">
+                                        <i class="bi bi-chat-right-dots-fill"></i>
+                                    </span>    
+                                    <select className = "form-select" id = "subject">
+                                    <option value = "pricing" selected>Pricing Query</option>
+                                    <option value = "content">Content Query</option>
+                                    <option value = "other">Other Query</option>
+                                </select>
+                                </div>
+                                
+                                <div className = "form-floating mb-4 mt-5">
+                                    <textarea id = "query" className = "form-control"></textarea>
+                                    <label for = "query">Your query...</label>
+                                </div>
+
+                                <div className = "mb-4 text-center">
+                                    <button type = "submit" className = "btn btn-secondary">Sumbit</button>
+                                </div>
+                                
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </sectin>
             
         </div>
     );
