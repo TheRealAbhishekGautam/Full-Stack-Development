@@ -66,6 +66,18 @@ function ActualWebPage(props) {
                             </h1>
                             <p className="lead my-4 text-muted">This is a dummy text, add whatever you want to add. This is a dummy text, add whatever you want to add. </p>
                             <a href="#pricing" className = "btn btn-secondary btn-lg">Buy Now</a>
+
+                            {/* Offcanvas - A side pannel that will be shown whem we click on a button 
+                            Can be implemented on any direction of the screen i.e. top/bottom/left/right */}
+                            {/* Just like modal it will be implemented in two parts first where the button is there and second
+                            the actual canvas that will be shown on clicking that button. */}
+
+                            <a href = "#sidebar" className = "d-block mt-3" data-bs-toggle = "offcanvas" 
+                            role = "button" aria-controls = "sidebar">
+                                Explore other books.
+                            </a>
+                            {/* The actual implementation of the offcanvas is there below we are accessing it with the respective ID. */}
+
                         </div>
                         <div className = "col-md-5 text-center d-none d-md-block">
                         {/* "d-none d-md-block" This basically means theat when the screen is lesser then medium, don't
@@ -498,8 +510,37 @@ function ActualWebPage(props) {
                     </div>
                 </div>
             </div>
-
             
+            {/* Implementation of off-canvas with id = sidebar */}
+            {/* By "offcanvas-start" we are telling that the offcanvas should come form the left. We can assign top/bottom/end too. */}
+            <div className = "offcanvas offcanvas-start" id = "sidebar" tabindex = "-1" aria-lebelledby = "sidebar-label">
+                <div className = "offcanvas-header">
+                    <h5 className = "offcanvas-title" id = "sidebar-label">My Other Books</h5>
+                    <button type = "button" className = "btn-close" data-bs-dismiss = "offcanvas" aria-label = "close"></button> 
+                </div>
+                <div className = "offcanvas-body">
+                    <p>
+                        This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. 
+                        This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. This is a dummy text. 
+                        This is a dummy text.
+                    </p>
+                    {/* Now we are adding a dropdown in the off-canvas */}
+                    <div className = "dropdown mt-3">
+                        <button className = "btn btn-secondary dropdown-toggle" type = "button" 
+                        id = "book-dropdown" data-bs-toggle = "dropdown">
+                            Choose a book Title
+                        </button>
+                        {/* aria-labelledby : Identifies the element (or elements) that labels the current element
+                        i.e. we are linking the dropdown button with the dropdown menu */}
+                        <ul className = "dropdown-menu" aria-labelledby = "book-dropdown">
+                            <li><a href = "#" className = "dropdown-item">Sample Text</a></li>
+                            <li><a href = "#" className = "dropdown-item">Sample Text</a></li>
+                            <li><a href = "#" className = "dropdown-item">Sample Text</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 }

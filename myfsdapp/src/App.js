@@ -6,6 +6,7 @@ import Component3 from './MyComponents/Component3';
 import Component4 from './MyComponents/Component4';
 import Component5 from './MyComponents/Component5';
 import ActualWebPage from './MyComponents/ActualWebPage';
+import Component6 from './MyComponents/Component6';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       {/* <Component4/> */}
       {/* <Component5/> */}
       <ActualWebPage/>
+      {/* <Component6/> */}
     </div>
   );
 }
