@@ -1,3 +1,2 @@
 # Bootstrap UI Project
-Full ready to use Bootstrap website template.
-You can use it to create a responsive websites for businesses/practice.
+This web application is built using modern web technologies such as HTML, CSS, and JavaScript frameworks like React.js. The user interface (UI) is designed to be visually appealing, responsive, and user-friendly, ensuring that customers can access the website from any device, be it desktop, tablet, or mobile. The frontend provides a smooth navigation experience, enabling users to explore the application conveniently.
